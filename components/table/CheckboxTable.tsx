@@ -32,7 +32,7 @@ const CheckboxTable = () => {
             <Checkbox />
           </Table.Cell>
           <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-            <p>Apple MacBook Pro 17"</p>
+            <p>Apple MacBook Pro 17</p>
           </Table.Cell>
           <Table.Cell>
             <p>Sliver</p>

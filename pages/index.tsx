@@ -6,7 +6,7 @@ export default function Home() {
   const router = useRouter();
   useEffect(() => {
     router.push("/home");
-  }, []);
+  });
   return (
     <div className="text-3xl font-bold underline">
       <DefaultSpinner />

@@ -14,8 +14,9 @@ const SolidBreadcrump: React.FC<IBreadcrumb> = ({ path }) => {
       aria-label="Solid background breadcrumb example"
       className="bg-gray-50 py-3 px-5 dark:bg-gray-900"
     >
-      {items.map((item) => (
+      {items.map((item, index) => (
         <Breadcrumb.Item
+          key={index}
           className="cursor-pointer"
           icon={undefined}
           onClick={() => router.push(`/${item}`)}

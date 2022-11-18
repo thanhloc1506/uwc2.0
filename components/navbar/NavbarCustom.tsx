@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 import { useAuthState } from "react-firebase-hooks/auth";
 import RecipientAvatar from "../chat/RecipientAvatar";
 import {} from "@heroicons/react/24/solid";
+import Image from "next/image";
 
 const LoginModal = dynamic(() => import("../auth/LoginModal"), {
   ssr: false,
@@ -51,7 +52,7 @@ export default function NavbarCustom() {
             href="https://flowbite.com/"
             className="mt-auto mb-auto"
           >
-            <img
+            <Image
               src="https://flowbite.com/docs/images/logo.svg"
               className="mr-3 h-6 sm:h-9"
               alt="Flowbite Logo"

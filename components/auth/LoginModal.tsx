@@ -1,4 +1,5 @@
 import { Button, Checkbox, Label, Modal, TextInput } from "flowbite-react";
+import Link from "next/link";
 import React, { useState } from "react";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { authentication } from "../../config/firebase";
@@ -68,12 +69,12 @@ const LoginModal: React.FC<ILoginForm> = ({
                   <Checkbox id="remember" />
                   <Label htmlFor="remember">Remember me</Label>
                 </div>
-                <a
+                <Link
                   href="/"
                   className="text-sm text-blue-700 hover:underline dark:text-blue-500"
                 >
                   Lost Password?
-                </a>
+                </Link>
               </div>
               <div className="w-full">
                 <Button>Log in to your account</Button>

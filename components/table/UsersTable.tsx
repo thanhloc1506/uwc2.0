@@ -86,8 +86,8 @@ const UsersTable = () => {
           </Table.HeadCell>
         </Table.Head>
         <Table.Body className="divide-y">
-          {users.map((user) => (
-            <UserTableRow data={user} />
+          {users.map((user, index) => (
+            <UserTableRow key={index} data={user} />
           ))}
         </Table.Body>
       </Table>

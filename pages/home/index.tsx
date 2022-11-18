@@ -15,7 +15,7 @@ const Homepage = () => {
 
   useEffect(() => {
     dispatch(getUser());
-  }, []);
+  });
 
   return (
     <div className="grid grid-cols-5 shadow-sm min-h-[75vh] mt-5">
