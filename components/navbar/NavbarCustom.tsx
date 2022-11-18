@@ -6,10 +6,28 @@ import { authentication } from "../../config/firebase";
 import dynamic from "next/dynamic";
 import { useAuthState } from "react-firebase-hooks/auth";
 import RecipientAvatar from "../chat/RecipientAvatar";
+import {} from "@heroicons/react/24/solid";
 
 const LoginModal = dynamic(() => import("../auth/LoginModal"), {
   ssr: false,
 });
+
+const logoutIcon = (
+  <svg
+    className="w-6 h-6"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.5"
+      d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+    ></path>
+  </svg>
+);
 
 export default function NavbarCustom() {
   const [showLoginForm, setShowLoginForm] = useState(false);
@@ -71,10 +89,12 @@ export default function NavbarCustom() {
                   {loginUser?.email?.split("@")[0]}
                 </nav>
               </nav>
-              <nav className="mt-auto mb-auto">
-                <p className="cursor-pointer" onClick={logout}>
-                  Logout
-                </p>
+              <nav
+                className="mt-auto mb-auto flex cursor-pointer"
+                onClick={logout}
+              >
+                {logoutIcon}
+                <p className="ml-1">Logout</p>
               </nav>
             </>
           )}
