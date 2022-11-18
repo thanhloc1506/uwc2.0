@@ -52,11 +52,13 @@ export default function NavbarCustom() {
             href="https://flowbite.com/"
             className="mt-auto mb-auto"
           >
-            <Image
+            {/* <Image
               src="https://flowbite.com/docs/images/logo.svg"
               className="mr-3 h-6 sm:h-9"
               alt="Flowbite Logo"
-            />
+              width={10}
+              height={10}
+            /> */}
             <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
               UWC 2.0
             </span>
