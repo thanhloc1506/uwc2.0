@@ -13,9 +13,9 @@ const Homepage = () => {
   const dispatch = useAppDispatch();
   const router = useRouter();
 
-  useEffect(() => {
-    dispatch(getUser());
-  });
+  // useEffect(() => {
+  //   dispatch(getUser());
+  // });
 
   return (
     <div className="grid grid-cols-5 shadow-sm min-h-[75vh] mt-5">
