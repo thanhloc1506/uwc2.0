@@ -1,7 +1,11 @@
 import { Button } from "flowbite-react";
 import React from "react";
 import FileUpload from "./FileUpload";
-import InputRow from "./InputRow";
+import dynamic from "next/dynamic";
+
+const InputRow = dynamic(() => import("./InputRow"), {
+  ssr: false,
+});
 
 const CreateRouteForm = () => {
   return (
