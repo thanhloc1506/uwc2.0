@@ -9,8 +9,11 @@ export const getTextPath = (text: string) => {
     case "createRoute":
       return "Create route";
 
-    case "assignTask":
+    case "assignTasks":
       return "Assign task";
+
+    case "addVehicle":
+      return "Add vehicle";
 
     case "conversation":
       return "Conversation";

@@ -1,5 +1,6 @@
 import { Sidebar } from "flowbite-react";
 import Link from "next/link";
+import React from "react";
 import {
   assign,
   conversation,
@@ -9,7 +10,11 @@ import {
   vehicle,
 } from "../../../icons/UWCIcons";
 
-const SidebarCustom = () => {
+interface ISideBar {
+  currentPage: string;
+}
+
+const SidebarCustom: React.FC<ISideBar> = ({ currentPage }) => {
   return (
     <div>
       <div className="w-fit shadow-sm h-[75vh]">
@@ -25,15 +30,15 @@ const SidebarCustom = () => {
                   Dashboard
                 </Sidebar.Item>
               </Link>
-              <Link href="/home" passHref className="flex">
+              <Link href="/assignTasks" passHref className="flex">
                 <nav className="mb-auto mt-auto">{assign}</nav>
                 <Sidebar.Item icon={undefined}>Assign task</Sidebar.Item>
               </Link>
-              <Link href="/home" passHref className="flex">
+              <Link href="/createRoute" passHref className="flex">
                 <nav className="mb-auto mt-auto">{create}</nav>
                 <Sidebar.Item icon={undefined}>Creat route</Sidebar.Item>
               </Link>
-              <Link href="/home" passHref className="flex">
+              <Link href="/addVehicle" passHref className="flex">
                 <nav className="mb-auto mt-auto">{vehicle}</nav>
                 <Sidebar.Item icon={undefined}>Add vehicle</Sidebar.Item>
               </Link>
